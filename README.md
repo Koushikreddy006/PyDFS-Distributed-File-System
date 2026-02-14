@@ -1,97 +1,103 @@
-📂PyDFS – Fault-Tolerant Distributed File System
-## OVERVIEW
-The **PyDFS (Python Distributed File System)** is a fault-tolerant distributed storage system inspired by the design principles of Google's Google File System (GFS).
-It simulates how large-scale cloud systems store files by:
-Splitting files into chunks
-Distributing chunks across multiple storage nodes
-Replicating data for fault tolerance
-Managing metadata centrally
-The system is built using Python sockets, multithreading, and modular architecture, demonstrating real-world distributed systems concepts.
+# PyDFS – Fault-Tolerant Distributed File System
 
+##  Overview
+
+**PyDFS (Python Distributed File System)** is a distributed storage system inspired by the architecture of Google File System (GFS).
+This project simulates how large-scale cloud systems manage file storage using a client–master–chunk server architecture.
+
+It demonstrates:
+
+- Distributed system design
+- Client–Server communication using TCP sockets
+- File transfer across storage nodes
+- Modular backend architecture in Python
+
+The system runs through a Command Line Interface (CLI) and showcases core distributed storage concepts.
+
+##  Architecture
+
+The system consists of three main components:
+
+ **Client** – Sends upload/download requests  
+ **Master Server** – Manages metadata and system coordination (basic structure implemented)  
+ **Chunk Server(s)** – Store actual file data  
+
+Current implementation supports socket-based file transfer between client and chunk server.
 
 ## Key Features
-File chunking (large files → smaller blocks)
-Distributed storage nodes (chunk servers)
-Replication (multiple copies for safety)
-Metadata management (master server)
-Heartbeat-based failure detection
-Multithreaded parallel uploads
-Logging & monitoring
-Command Line Interface (CLI)
 
+###  Implemented
 
-## Workflow
-Client uploads file
-File split into chunks
-Master assigns servers
-Chunks replicated across nodes
-Client downloads & merges chunks
+- Socket-based file upload  
+- Client–Server communication (TCP)  
+- Distributed node structure  
+- Modular project design  
+- CLI-based interaction  
+- Local distributed storage simulation  
 
+### In Progress
 
-## Technologies Used
-Python
-Socket Programming (TCP)
-Multithreading
-File Handling
-JSON Metadata
-Logging
+- File chunking (splitting large files into blocks)  
+- Metadata tracking via master server  
+- Data replication for fault tolerance  
+- Failure detection using heartbeat mechanism  
+- Multithreaded parallel uploads  
+- Download and chunk merge functionality  
 
-## Project Structure
+##  Workflow
+
+1. Client sends upload request  
+2. File is transmitted via TCP socket  
+3. Chunk server receives and stores file in `storage/` directory  
+4. Future enhancement: master-managed chunk allocation and replication  
+
+##  Technologies Used
+
+- Python  
+- Socket Programming (TCP)  
+- File Handling  
+- JSON (for metadata storage)  
+- Modular Backend Architecture  
+
+##  Project Structure
+
 PyDFS/
 ├── client/
-│   └── client.py
+│ └── client.py
 ├── master/
-│   └── master.py
+│ └── master.py
 ├── chunk_server/
-│   └── chunk_server.py
+│ └── chunk_server.py
 ├── utils/
-│   ├── metadata.py
-│   ├── logger.py
-│   ├── checksum.py
+│ ├── metadata.py
+│ ├── logger.py
+│ └── checksum.py
 ├── storage/
 ├── metadata.json
-├── system.log
 ├── main.py
 └── README.md
 
 
-PyDFS/
-├── client/
-├── master/
-├── chunk_server/
-├── utils/
-├── storage/
-├── metadata.json
-├── system.log
-└── main.py
-
-
 ## Usage
-Start the System
-Open 3 terminals:
-Terminal 1 – Start Master Server
+
+# 1️ Start Master Server
 python master/master.py
-Terminal 2 – Start Chunk Server(s)
+
+# 2️ Start Chunk Server
 python chunk_server/chunk_server.py
-(You can start multiple servers for replication)
-Terminal 3 – Start Client
+
+# 3️ Start Client
 python main.py
-Client Commands
+
+# Client Commands
 upload file.txt
 download file.txt
 exit
 
-
 ## Getting Started
-1. Clone Your Repository 
+# Clone the Repository
 git clone https://github.com/koushikreddy006/PyDFS-Distributed-File-System.git
 cd PyDFS-Distributed-File-System
-2. Install Requirements (optional)
-If needed:
-pip install -r requirements.txt
-(Mostly only Python standard libraries are used)
-3. Run the System
-Starturce Master → Chunk Servers → Client
 
 
 
