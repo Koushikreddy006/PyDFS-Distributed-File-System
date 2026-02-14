@@ -1,6 +1,6 @@
-# PyDFS – Fault-Tolerant Distributed File System
+### 📂 PyDFS – Fault-Tolerant Distributed File System
 
-##  Overview
+## 💡 Overview
 
 **PyDFS (Python Distributed File System)** is a distributed storage system inspired by the architecture of Google File System (GFS).
 This project simulates how large-scale cloud systems manage file storage using a client–master–chunk server architecture.
@@ -19,10 +19,8 @@ The system runs through a Command Line Interface (CLI) and showcases core distri
 
 Try the interactive application here: [Live Demo](https://pydfs-distributed-file-system-tg73kznlmr5nvhtwyc26by.streamlit.app)
 
-This web demo allows users to upload files and simulate distributed storage functionality through an interactive interface built using Streamlit.
 
-
-##  Architecture
+##  ⚙️ Architecture
 
 The system consists of three main components:
 
@@ -32,9 +30,9 @@ The system consists of three main components:
 
 Current implementation supports socket-based file transfer between client and chunk server.
 
-## Key Features
+ ## ⚡ Key Features
 
-###  Implemented
+### 📩 Implemented
 
 - Socket-based file upload  
 - Client–Server communication (TCP)  
@@ -43,7 +41,7 @@ Current implementation supports socket-based file transfer between client and ch
 - CLI-based interaction  
 - Local distributed storage simulation  
 
-### In Progress
+### 📍 In Progress
 
 - File chunking (splitting large files into blocks)  
 - Metadata tracking via master server  
@@ -52,14 +50,14 @@ Current implementation supports socket-based file transfer between client and ch
 - Multithreaded parallel uploads  
 - Download and chunk merge functionality  
 
-##  Workflow
+## ✒️ Workflow
 
 1. Client sends upload request  
 2. File is transmitted via TCP socket  
 3. Chunk server receives and stores file in `storage/` directory  
 4. Future enhancement: master-managed chunk allocation and replication  
 
-##  Technologies Used
+ ## 🛠️ Technologies Used
 
 - Python  
 - Socket Programming (TCP)  
@@ -67,7 +65,7 @@ Current implementation supports socket-based file transfer between client and ch
 - JSON (for metadata storage)  
 - Modular Backend Architecture  
 
-##  Project Structure
+## ✔️  Project Structure
 
 PyDFS/
 ├── client/
@@ -86,7 +84,7 @@ PyDFS/
 └── README.md
 
 
-## Usage
+## 📌 Usage
 
 # 1️ Start Master Server
 python master/master.py
@@ -97,12 +95,12 @@ python chunk_server/chunk_server.py
 # 3️ Start Client
 python main.py
 
-# Client Commands
+# 📈 Client Commands
 upload file.txt
 download file.txt
 exit
 
-## Getting Started
+## 🚀 Getting Started
 # Clone the Repository
 git clone https://github.com/koushikreddy006/PyDFS-Distributed-File-System.git
 cd PyDFS-Distributed-File-System
