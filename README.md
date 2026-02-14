@@ -13,6 +13,15 @@ It demonstrates:
 - Modular backend architecture in Python
 
 The system runs through a Command Line Interface (CLI) and showcases core distributed storage concepts.
+---
+
+## 🔗 Live Demo
+
+ Try the interactive web application here:  
+https://pydfs-distributed-file-system-tg73kznlmr5nvhtwyc26by.streamlit.app/#py-dfs-distributed-file-system-web-demo
+
+This web demo allows users to upload files and simulate distributed storage functionality through an interactive interface built using Streamlit.
+
 
 ##  Architecture
 
