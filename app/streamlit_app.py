@@ -25,4 +25,3 @@ if files:
         st.write(file)
 else:
     st.write("No files stored yet.")
-Added Streamlit web demo app
