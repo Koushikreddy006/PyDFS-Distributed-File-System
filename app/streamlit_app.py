@@ -35,7 +35,7 @@ if files:
 
         file_size = os.path.getsize(file_path) / 1024  # KB
         upload_time = datetime.fromtimestamp(
-            os.path.getctime(file_path)
+            os.path.getmtime(file_path)
         ).strftime("%Y-%m-%d %H:%M:%S")
 
         col1, col2, col3 = st.columns([4, 2, 2])
